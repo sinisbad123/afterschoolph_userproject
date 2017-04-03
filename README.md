@@ -1,2 +1,2 @@
-# afterschoolph_userproject
+# AfterschoolPH User Directory
 User directory of AfterschoolPH
