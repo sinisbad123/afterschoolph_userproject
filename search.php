@@ -12,11 +12,15 @@
     </div>
 
     <div class="row search-panel">
-      <div class="col-lg-6 col-lg-offset-2">
+      <div class="col-xs-12 col-sm-12 col-lg-6 col-lg-offset-2">
         <input type="text" class="form-control font-awesome-input" name="search_username" placeholder="&#xF002; Search Username" />
       </div>
 
-      <div class="col-lg-2">
+      <div class="col-xs-12 col-sm-12 visible-xs visible-sm">
+        <br />
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-lg-2">
         <input type="submit" name="search" class="btn btn-info btn-block" value="Search" />
       </div>
     </div>
