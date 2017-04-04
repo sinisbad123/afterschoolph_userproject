@@ -1,6 +1,11 @@
 # AfterschoolPH User Directory
 User directory of AfterschoolPH
 
+# NOTE
+- Before starting, make sure to run the script in order to simulate the different records.
+- Currently there are two users, mike and marcus.
+- You can check their respective login info within the script or within the database after running the script.
+
 ## Exercise 1
 Used tools:
 - Sublime Text 3
