@@ -1,15 +1,33 @@
 <?php
   include_once 'dbutil.php';
 
+  session_start();
+
   $welcome_message = "";
 
   if (isset($_POST['username'])) {
+
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;
+
     $query = "SELECT * FROM user "
-        . "WHERE username='". $username . "'"
-        . "AND password='". $password . "' LIMIT 1";
+        . "WHERE username='". $_SESSION['username'] . "'"
+        . "AND password='". $_SESSION['password'] . "' LIMIT 1";
+
+    $result = mysql_query($query);
+
+    if ($result) {
+      while ($row = mysql_fetch_assoc($result)) {
+          $welcome_message = "Welcome " . $row['name'] . "!";
+      }
+    }
+  } else if (isset($_SESSION['username'])) {
+    $query = "SELECT * FROM user "
+        . "WHERE username='". $_SESSION['username'] . "'"
+        . "AND password='". $_SESSION['password'] . "' LIMIT 1";
 
     $result = mysql_query($query);
 
