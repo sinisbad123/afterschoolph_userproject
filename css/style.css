@@ -30,6 +30,18 @@
   background: #4286f4;  
 }
 
+.give-space {
+  margin-top: 2%;
+}
+
+.error-message {
+  border: 1px;
+  border-radius: 3px;
+  padding: 10px;
+  width: 100%;
+  background: #f2dede;
+}
+
 .index-content {
   margin-top: 10%;
 }

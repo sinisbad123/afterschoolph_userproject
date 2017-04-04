@@ -19,7 +19,7 @@ $(document).ready(function() {
 			};
 
 			$.ajax({
-			   url: 'login_api.php',
+			   url: 'api/login_api.php',
 			   data: {user_data: usr_object},
 			   type: 'POST',
 			   success: function(response) {

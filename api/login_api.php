@@ -1,5 +1,5 @@
 <?php 
-	include_once 'dbutil.php';	
+	include_once '../dbutil.php';	
 
 	$usr_object = $_POST["user_data"];
 
