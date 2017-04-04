@@ -1,3 +1,26 @@
+<?php
+  include_once 'dbutil.php';
+
+  $welcome_message = "";
+
+  if (isset($_POST['username'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $query = "SELECT * FROM user "
+        . "WHERE username='". $username . "'"
+        . "AND password='". $password . "' LIMIT 1";
+
+    $result = mysql_query($query);
+
+    if ($result) {
+      while ($row = mysql_fetch_assoc($result)) {
+          $welcome_message = "Welcome " . $row['name'] . "!";
+      }
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,6 +32,12 @@
 	</head>
 	<body>
     <div class="header">
+    </div>
+
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-lg-6 col-lg-offset-2">
+        <h2><?php echo $welcome_message; ?></h2>
+      </div>
     </div>
 
     <div class="row search-panel">
